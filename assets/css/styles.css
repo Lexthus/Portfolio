@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --white: #ffffff;
+    --grey: #414141;
+    --red: 	#d62d20;
+    --yellow: #ffa700;
+    --blue:#3367d6;
+    --orange:#e34c26;
+    --green:#008744;
+    --blueReact: #61DBFB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+  
+a:hover {
+    color: #bbbbbb;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 90px 0;
+    text-align: center;
+    background: white;
+}
+
+.container {
+    width: 100%;
+    display: inherit;
+    max-width: 1200px;
+    justify-content: inherit;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background:var(--white);
+    color: #f5f5f5;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    background: transparent;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 10;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    transition: background 0.3s;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+}
+  
+.navbar__title {
+    font-size: 24px;
+}
+  
+.navbar__title::before {
+    content: "<";
+    color:var(--blue);
+}
+  
+.navbar__title::after {
+    content: "/>";
+    color: var(--blue);
+}
+
+.navbar__links {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+.navbar__link {
+    padding-left: 20px;
+}
+
+.navbar__link a {
+    color: #8e8e8e;
+    transition: color 0.3s;
+}
+
+.navbar__link a:hover {
+    color: var(--blue);
+    transition: color 0.3s;
+}
+
+
+/* Sección Home */
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+}
+
+.home__background {
+    width: 100%;
+    height: 100%;
+    background-color: #8e8e8e;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.home__profile {
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 40px;
+    transition: filter  3s;
+}
+
+.home__title {
+    font-size: 60px;
+    text-shadow: 1px 1px black;
+    color: var(--blue);
+}
+  
+.home__title--primary, .home__title--secondary {
+    font-size: 45px;
+    color: #f5f5f5;
+    text-shadow: 1px 1px black;
+}
+
+/* Sección About*/
+
+.section__title {
+    color: var(--grey);
+    font-size: 35px;
+    margin-bottom: 30px;
+    display: flex;
+  }
+  
+.section__subtitle {
+    color: var(--grey);
+    text-align: start;
+    margin-bottom: 20px;
+}
+  
+.about__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+  
+.about__description {
+    text-align: left;
+    color: var(--grey);
+    padding-right: 80px;
+    line-height: 40px;
+}
+  
+.about__summary {
+    margin: 30px 0;
+}
+  
+.about__description span {
+    color: var(--grey);
+}
+  
+.about__description h2 {
+    color: var(--grey);
+    margin: 20px 0;
+}
+  
+.about__skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+  
+.skill__title {
+    color: var(--grey);
+    grid-column: span 3;
+    text-align: left;
+    margin: 20px 0;
+}
+  
+.skill__item {
+    font-size: 65px;
+    color: var(--grey);
+    padding: 35px;
+    transition: all 0.3s;
+    min-width: 130px;
+    height: 180px;
+}
+  
+.skill__item img {
+    max-height: 50px;
+    max-width: 100px;
+}
+
+.fa-js{
+    color:#f0db4f ;
+}
+  
+.fa-git-alt{
+    color: #f34f29;
+}
+
+.skill__name {
+    font-size: 16px;
+    text-align: center;
+}
+
+.buttons__container {
+    display: flex;
+    border-radius: 10px;
+}
+  
+.button {
+    background: #191919;
+    color: #f5f5f5;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: auto;
+}
+  
+.button:hover {
+    color: var(--blue);
+}
+
+.button--cta {
+    background: var(--blue);
+    color: var(--white);
+    padding: 5px 30px;
+    display: inline-block;
+    align-self: center;
+    margin: 20px auto;
+    font: bold;
+    border-radius: 5px;
+}
+  
+.button--cta i {
+    margin-right: 10px;
+}
+  
+.button--cta:hover {
+    background: var(--grey);
+    color: white;
+}
+
+/* Sección Services */
+
+/* Sección Portfolio */
+
+/* Sección Contact */
